@@ -4,9 +4,7 @@
 
 Start a server, share the link, paste your decklists, and play Magic together — from your phone, tablet, or laptop. No installs, no accounts, no rules enforcement. Just a digital tabletop that gets out of your way.
 
-<!--
 ![Pyre — Dark Mode Board](docs/screenshots/board-dark.png)
--->
 
 ---
 
@@ -20,6 +18,8 @@ Start a server, share the link, paste your decklists, and play Magic together �
 5. Play Magic
 ```
 
+![Lobby](docs/screenshots/lobby.png)
+
 ---
 
 ## Features
@@ -32,10 +32,6 @@ Start a server, share the link, paste your decklists, and play Magic together �
 
 **Sealed Draft** — Open real boosters from any MTG set. Build a 40-card deck with sorting tools and basic lands. Then play.
 
-<!--
-![Game Modes](docs/screenshots/modes.png)
--->
-
 ### Designed for Phones
 
 Pyre is built touch-first. The entire UI is designed for phones and tablets — not adapted from desktop as an afterthought.
@@ -46,17 +42,14 @@ Pyre is built touch-first. The entire UI is designed for phones and tablets — 
 - **44px minimum touch targets** — every button is finger-friendly
 - **Works on iOS Safari** — automatic HTTP polling fallback when WebSocket is unavailable
 
-<!--
-![Mobile UI](docs/screenshots/mobile.png)
--->
-
 ### Dark Mode
 
 OLED-friendly dark theme by default. Card art pops against the black background. Toggle to light mode in settings.
 
-<!--
-![Dark Mode](docs/screenshots/dark-mode.png)
--->
+<p align="center">
+  <img src="docs/screenshots/board-dark.png" width="48%" alt="Dark Mode">
+  <img src="docs/screenshots/board-light.png" width="48%" alt="Light Mode">
+</p>
 
 ### Real-Time Multiplayer
 
@@ -74,10 +67,6 @@ Every card rendered with real art from the Scryfall API. Double-faced cards flip
 ### Sealed Draft
 
 Open packs with a satisfying multi-phase animation — glow, tear, and card fan-out. Build your deck with 5 sort modes (color, type, CMC, rarity, name), add basic lands with mana pip tiles, name your deck, and jump into a game.
-
-<!--
-![Draft Mode](docs/screenshots/draft.png)
--->
 
 ### Everything You Need, Nothing You Don't
 
