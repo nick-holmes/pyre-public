@@ -46,10 +46,9 @@ Pyre is built touch-first. The entire UI is designed for phones and tablets — 
 
 OLED-friendly dark theme by default. Card art pops against the black background. Toggle to light mode in settings.
 
-<p align="center">
-  <img src="docs/screenshots/board-dark.png" width="48%" alt="Dark Mode">
-  <img src="docs/screenshots/board-light.png" width="48%" alt="Light Mode">
-</p>
+| Dark (default) | Light |
+|:-:|:-:|
+| ![Dark Mode](docs/screenshots/board-dark.png) | ![Light Mode](docs/screenshots/board-light.png) |
 
 ### Real-Time Multiplayer
 
