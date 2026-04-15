@@ -1,104 +1,97 @@
+<div align="center">
+
 # Pyre
 
-### Multiplayer Magic: The Gathering on any device.
+**Multiplayer Magic: The Gathering on any device.**
 
-Start a server, share the link, paste your decklists, and play Magic together — from your phone, tablet, or laptop. No installs, no accounts, no rules enforcement. Just a digital tabletop that gets out of your way.
+Start a server, share the link, paste your decklists, play Magic.
+No installs. No accounts. No rules enforcement. Just a digital tabletop.
 
-![Pyre — Dark Mode Board](docs/screenshots/board-dark.png)
+</div>
+
+![Pyre — Desktop Dark Mode](docs/screenshots/board-desktop-dark.png)
+
+## Works Everywhere
+
+Pyre is designed to work on every screen size — from a 27" monitor to an iPhone SE.
+
+| Desktop | Tablet | Phone |
+|:-------:|:------:|:-----:|
+| ![Desktop](docs/screenshots/board-desktop-dark.png) | ![Tablet](docs/screenshots/board-tablet.png) | ![Phone](docs/screenshots/board-phone.png) |
+| Full board + game log sidebar | Compact player bar, touch-optimized | Life controls at thumb, cards wrap |
 
 ---
 
-## How It Works
+## Get Started in 30 Seconds
 
+```bash
+npm install    # one dependency: ws
+npm start      # prints a LAN URL — share it
 ```
-1. Host runs npm start
-2. Friends connect via the LAN URL — phone, tablet, anything
-3. Pick a mode: Standard, Commander, or Sealed Draft
-4. Paste decklists or crack packs
-5. Play Magic
-```
+
+That's it. Friends connect from any browser.
+
+---
+
+## Three Ways to Play
+
+**Standard** — Paste a decklist from Moxfield, Archidekt, MTGO, or Arena and go.
+
+**Commander** — 40 life, command zone with tax tracking, commander damage across all opponents. 2–8 players.
+
+**Sealed Draft** — Crack real boosters from any MTG set. Build a 40-card deck with sorting tools and basic lands. Then play.
 
 ![Lobby](docs/screenshots/lobby.png)
 
 ---
 
-## Features
+## Dark & Light
 
-### Play Any Format
+OLED-friendly dark theme by default. Card art pops. Toggle to light in settings.
 
-**Standard** — Paste a decklist and go. Supports Moxfield, Archidekt, MTGO, and Arena formats.
-
-**Commander** — Command zone with tax tracking, commander damage matrix across all opponents, and 40-life starting totals. Works with 2-8 players.
-
-**Sealed Draft** — Open real boosters from any MTG set. Build a 40-card deck with sorting tools and basic lands. Then play.
-
-### Designed for Phones
-
-Pyre is built touch-first. The entire UI is designed for phones and tablets — not adapted from desktop as an afterthought.
-
-- **Tap any card to preview** — zoomed view with context-aware quick actions (Play, Tap, Discard, Exile)
-- **Compact player bar** — opponent info at the top, your life total above your hand
-- **Commander strips** — collapsible command zone with tax and damage tracking
-- **44px minimum touch targets** — every button is finger-friendly
-- **Works on iOS Safari** — automatic HTTP polling fallback when WebSocket is unavailable
-
-### Dark Mode
-
-OLED-friendly dark theme by default. Card art pops against the black background. Toggle to light mode in settings.
-
-| Dark (default) | Light |
-|:-:|:-:|
-| ![Dark Mode](docs/screenshots/board-dark.png) | ![Light Mode](docs/screenshots/board-light.png) |
-
-### Real-Time Multiplayer
-
-All game state lives on the server. Every action is broadcast instantly to all players. Drop off WiFi and come right back — your seat is held for 10 minutes.
-
-- **Any number of players** — 1v1, 4-player Commander, 8-player chaos
-- **Cross-device** — iPhone vs. laptop vs. Android tablet, all in the same game
-- **Game log** — every action logged with timestamps and player colors
-- **Reconnection** — session tokens in localStorage, automatic rejoin
-
-### Card Art from Scryfall
-
-Every card rendered with real art from the Scryfall API. Double-faced cards flip with animation. Hover (desktop) or tap (mobile) to preview any card at full size.
-
-### Sealed Draft
-
-Open packs with a satisfying multi-phase animation — glow, tear, and card fan-out. Build your deck with 5 sort modes (color, type, CMC, rarity, name), add basic lands with mana pip tiles, name your deck, and jump into a game.
-
-### Everything You Need, Nothing You Don't
-
-- **Tap/untap** cards with a tap
-- **Life totals** with +/- buttons and flash animations
-- **Counters** — +1/+1 counters on any permanent
-- **Zone management** — browse graveyard, exile, library with multi-select
-- **Library search** — find cards alphabetically, take to hand or reveal
-- **Drag-and-drop** — move cards between zones on any device (long-press on touch)
-- **Saved decks** — name your decks, reuse them later
-- **New Game** — vote to restart from settings, everyone goes back to the lobby
+| Dark | Light |
+|:----:|:-----:|
+| ![Dark](docs/screenshots/board-desktop-dark.png) | ![Light](docs/screenshots/board-desktop-light.png) |
 
 ---
 
-## Quick Start
+## Built for Touch
 
-```bash
-npm install    # one dependency: ws
-npm start      # prints a LAN URL
-```
+Every interaction is designed for fingers first, adapted to mouse second.
 
-Share the URL with your group. That's it.
+- **Tap to preview** — see any card zoomed with quick actions (Play, Tap, Discard)
+- **Long-press to drag** — move cards between zones on any device
+- **44px touch targets** — every button meets accessibility minimums
+- **iOS Safari** — automatic HTTP polling fallback when WebSocket drops
+
+## Everything Else
+
+- **Real-time multiplayer** via WebSockets — any number of players
+- **Card art from Scryfall** — every card rendered with real art
+- **Double-faced cards** — flip with 3D animation
+- **Reconnection** — drop off WiFi, come right back. Seat held for 10 minutes
+- **Game log** — every action timestamped with player colors
+- **Zone management** — browse graveyard, exile, library with multi-select
+- **Library search** — find cards alphabetically, take to hand or reveal
+- **Counters** — +1/+1 on any permanent
+- **Saved decks** — name and reuse across games
+- **Pack opening** — glow, tear, and card fan-out animation
+- **New Game** — vote to restart from settings
 
 ---
 
 ## Tech
 
-- **Server:** Node.js + `ws` (WebSocket) with HTTP long-polling fallback
-- **Client:** Vanilla HTML/CSS/JS — zero external dependencies, no build step
-- **Cards:** Scryfall API for card data and art
-- **Rendering:** DOM reconciliation for smooth card animations
-- **Theme:** CSS custom properties with dark/light toggle
+| | |
+|-|-|
+| **Server** | Node.js + `ws` with HTTP long-polling fallback |
+| **Client** | Vanilla HTML/CSS/JS — zero dependencies, no build step |
+| **Cards** | Scryfall API |
+| **Rendering** | DOM reconciliation for smooth card animations |
+| **Theme** | CSS custom properties, dark/light toggle |
 
 ---
 
-*Pyre is a free-form digital tabletop, not a digital judge. Play however you want — just like paper.*
+<div align="center">
+<i>Pyre is a free-form digital tabletop, not a digital judge.<br>Play however you want — just like paper.</i>
+</div>
